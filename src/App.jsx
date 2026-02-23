@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const steps = [
   {
@@ -133,7 +133,14 @@ export default function App() {
   }
 
   function handleKey(e) {
-    if (e.key === "Enter" && e.metaKey) advance();
+    //if (e.key === "Enter" && e.metaKey) advance();
+    useEffect(() => {
+      const handleKey = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "Enter") advance();
+      };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [current, form]);
   }
 
   if (submitted) {
@@ -164,7 +171,7 @@ export default function App() {
   const val = getValue(step.field);
 
   return (
-    <div style={styles.page} onKeyDown={handleKey}>
+    <div style={styles.page}>
       {/* Progress bar */}
       <div style={styles.progressTrack}>
         <div
