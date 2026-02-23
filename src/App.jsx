@@ -339,6 +339,12 @@ export default function App() {
             {isLast ? "Submit Signal" : "Continue →"}
           </button>
         </div>
+        {!step.optional && (
+          <p style={styles.shortcutLabel}>
+            {navigator.platform.includes("Mac") ? "⌘" : "Ctrl"} + Enter to continue
+          </p>
+        )}
+
       </div>
     </div>
   );
@@ -564,5 +570,13 @@ const styles = {
     height: "1px",
     background: "#eee",
     margin: "0 0 24px",
+  },
+  shortcutLabel: {
+    textAlign: "right",
+    marginTop: "12px",
+    fontSize: "10px",
+    color: "#ccc",
+    fontFamily: "'Helvetica Neue', sans-serif",
+    marginBottom: 0,
   },
 };
