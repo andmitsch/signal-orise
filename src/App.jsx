@@ -29,7 +29,7 @@ const steps = [
   {
     id: "problem",
     question: "What problem did you observe?",
-    hint: "Describe what was broken, missing, or being done manually. Not the solution yet — just what you saw.",
+    hint: "Describe what was broken, missing, or being done manually. Not the solution yet, just what you saw.",
     type: "textarea",
     placeholder: "I noticed that...",
     field: "problem",
@@ -37,7 +37,7 @@ const steps = [
   {
     id: "solution",
     question: "What solution do you have in mind?",
-    hint: "Describe what you think could be built or offered. Rough is fine — we're not holding you to this.",
+    hint: "Describe what you think could be built or offered. Rough is fine. This is just to record the idea.",
     type: "textarea",
     placeholder: "What I think could work is...",
     field: "solution",
@@ -62,7 +62,7 @@ const steps = [
   },
   {
     id: "standalone",
-    question: "Could a customer use this without oRise being involved every time?",
+    question: "Could a customer use this without someone from oRise being involved every time?",
     hint: "Think about whether they'd need a consultant to guide them each time, or if it could run on its own.",
     type: "radio+text",
     choices: ["Yes", "No", "Not sure"],
@@ -72,9 +72,9 @@ const steps = [
   {
     id: "contact",
     question: "Who else should we speak to about this?",
-    hint: "Optional. Ideas often carry context that lives with a specific person — the client who dealt with this daily, a colleague who saw the same thing at a different site. Knowing who else holds that context means we can go deeper when we follow up, without losing what made the idea interesting in the first place. A name and a sentence is enough — we'll always go through you first.",
+    hint: "Optional. Ideas often carry context that lives with a specific person, the client who dealt with this daily, a colleague who saw the same thing at a different site. Knowing who else holds that context means we can go deeper when we follow up, without losing what made the idea interesting in the first place. A name and a sentence is enough.",
     type: "textarea",
-    placeholder: "e.g. Klaus at BASF plant — he was the one dealing with this daily",
+    placeholder: "e.g. Sebastian at BASF plant. He was the one dealing with this daily",
     field: "contact",
     optional: true,
   },
