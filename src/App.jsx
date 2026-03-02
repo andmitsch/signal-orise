@@ -353,7 +353,7 @@ export default function App() {
 const styles = {
   page: {
     minHeight: "100vh",
-    background: "#f5f4ef",
+    background: "#f5f2ef",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
